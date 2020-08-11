@@ -1,8 +1,10 @@
+import Link from "next/link";
 import React from "react";
 import Stripe from "stripe";
 import { GetStaticPaths, GetStaticProps } from "next";
 
 import stripeConfig from "../config/stripe";
+import CheckoutButton from "../components/CheckoutButton";
 
 interface Props {
   product: Stripe.Product;
@@ -43,8 +45,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { productId } = params;
 
   const product = await stripe.products.retrieve(productId as string);
+  const prices = await stripe.prices.list();
 
-  console.log("product", product);
+  // console.log("product", product);
+  console.log("prices", prices);
 
   return {
     props: {
@@ -62,6 +66,11 @@ const Product: React.FC<Props> = ({ product }) => {
         <img src={product.images} style={{ width: "300px" }} />
       )}
       <h2>R$ 20,00</h2>
+      {/* <CheckoutButton
+        priceId={product.id}
+        itemName={product.name}
+      /> <br /> <br /> */}
+      <Link href="/">Go back</Link>
     </div>
   );
 };

@@ -10,10 +10,15 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^1.8.0",
+    "@types/next": "^9.0.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "babel-plugin-styled-components": "^1.11.1",
     "next": "9.5.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "stripe": "^8.84.0"
+    "stripe": "^8.84.0",
+    "styled-components": "^5.1.1",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",

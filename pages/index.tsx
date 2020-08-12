@@ -2,8 +2,14 @@ import Head from "next/head";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Stripe from "stripe";
+import styled from "styled-components";
 
 import stripeConfig from "../config/stripe";
+
+const Title = styled.h1`
+  color: #069;
+  font-size: 40px;
+`;
 
 interface Props {
   products: Stripe.Product[];
@@ -26,7 +32,10 @@ export const getStaticProps: GetStaticProps = async () => {
 const HomePage: React.FC<Props> = ({ products }) => {
   return (
     <>
-      <h1>Original.io Store</h1>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Title>Original.io Store</Title>
       {products.map((product) => (
         <div key={product.id}>
           <h1>{product.name}</h1>
@@ -37,8 +46,6 @@ const HomePage: React.FC<Props> = ({ products }) => {
           <h2>R$ 20,00</h2>
 
           <Link href={"/" + product.id}>Visit Page</Link>
-
-          <hr />
         </div>
       ))}
     </>

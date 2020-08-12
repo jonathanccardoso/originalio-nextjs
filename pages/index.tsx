@@ -32,7 +32,7 @@ const HomePage: React.FC<Props> = ({ products }) => {
           <h1>{product.name}</h1>
           <p>{product.description}</p>
           {product.images && (
-            <img src={product.images} style={{ width: "300px" }} />
+            <img src={`${product.images}`} style={{ width: "300px" }} />
           )}
           <h2>R$ 20,00</h2>
 

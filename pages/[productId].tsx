@@ -8,6 +8,7 @@ import CheckoutButton from "../components/CheckoutButton";
 
 interface Props {
   product: Stripe.Product;
+  price: Stripe.Price;
 }
 
 // next: create page
@@ -27,7 +28,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
       productId: product.id,
     },
   }));
-
   // console.log("paths", paths);
 
   return {
@@ -45,31 +45,36 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { productId } = params;
 
   const product = await stripe.products.retrieve(productId as string);
+  // console.log("product", product);
+
   const prices = await stripe.prices.list();
 
-  // console.log("product", product);
-  console.log("prices", prices);
+  const priceFilter = prices.data.filter((price) => {
+    return price.product === product.id;
+  });
+  // console.log("priceFilter", priceFilter);
 
   return {
     props: {
       product,
+      price: priceFilter,
     },
   };
 };
 
-const Product: React.FC<Props> = ({ product }) => {
+const Product: React.FC<Props> = ({ product, price }) => {
   return (
     <div>
       <h1>{product.name}</h1>
       <p>{product.description}</p>
       {product.images && (
-        <img src={product.images} style={{ width: "300px" }} />
+        <img src={`${product.images}`} style={{ width: "300px" }} />
       )}
-      <h2>R$ 20,00</h2>
-      {/* <CheckoutButton
-        priceId={product.id}
-        itemName={product.name}
-      /> <br /> <br /> */}
+      <h3>
+        {price[0].unit_amount / 100} {price[0].currency.toUpperCase()}
+      </h3>
+      <CheckoutButton priceId={price[0].id} itemName={product.name} /> <br />{" "}
+      <br />
       <Link href="/">Go back</Link>
     </div>
   );

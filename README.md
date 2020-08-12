@@ -8,4 +8,9 @@
 
 - Typescript
 - Stripe Integration
-- 
+- Netlify
+
+## Using
+
+- Card Testing
+  https://stripe.com/docs/testing

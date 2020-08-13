@@ -35,6 +35,7 @@ const HomePage: React.FC<Props> = ({ products }) => {
       <Head>
         <title>Home</title>
       </Head>
+
       <Title>Original.io Store</Title>
       {products.map((product) => (
         <div key={product.id}>

@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import media from "styled-media-query";
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Montserrat", "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -26,12 +26,6 @@ export default createGlobalStyle`
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     line-height: 0.5;
-  }
-  img {
-    /* display: block;
-  	height: auto;
-    width: 55%;
-  	max-width: 100%; */
   }
   p,
   span {
@@ -47,7 +41,6 @@ export default createGlobalStyle`
     line-height: 1.1;
   }
   p {
-    margin-top: 0;
     ${media.lessThan("medium")`
       margin-top: 4.5rem !important;
     `}

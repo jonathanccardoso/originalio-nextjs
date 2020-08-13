@@ -53,7 +53,7 @@ export default createGlobalStyle`
     `}
   }
   a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
   a:hover {

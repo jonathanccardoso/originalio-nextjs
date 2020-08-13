@@ -22,8 +22,8 @@ const CheckoutButton: React.FC<Props> = ({ priceId, itemName }) => {
         },
       ],
       mode: "payment",
-      successUrl: `http://localhost:3000/success?itemName=${itemName}`,
-      cancelUrl: "http://localhost:3000/cancel",
+      successUrl: `https://originalio-nextjs.netlify.app/success?itemName=${itemName}`,
+      cancelUrl: "https://originalio-nextjs.netlify.app/cancel",
     });
 
     if (error) {

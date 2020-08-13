@@ -1,16 +1,31 @@
-# Original io Next JS
+<h1 align="center">
+    <img alt="original.io" title="#original.io" src="#" width="200px" />
+</h1>
 
-> Project created to learn about react, stripe and nextjs
+<h4 align="center">
+  🚀 Project developed to learn about react, stripe and nextjs
+</h4>
 
 [Layout and preferences based on join us of Original](https://github.com/original-io/join-us)
 
-## Features
+## :rocket: Technology
 
-- Typescript
-- Stripe Integration
-- Netlify
+This project was developed with the following technologies:
 
-## Using
+- [Typescript](#)
+- [Stripe Integration](#)
+- [Styled Components](#)
+- [Styled Media Query](#)
+- [Netlify](#)
 
-- Card Testing
+## 💻 Project
+
+Original.io is a ...
+
+## How to Using
+
+- [Access](https://originalio-nextjs.netlify.app/)
+- Card for Testing
   https://stripe.com/docs/testing
+
+## License

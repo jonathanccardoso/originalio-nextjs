@@ -2,7 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Stripe from "stripe";
+
 import styled from "styled-components";
+import Header from "../components/Header";
 
 import stripeConfig from "../config/stripe";
 
@@ -31,12 +33,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const HomePage: React.FC<Props> = ({ products }) => {
   return (
-    <>
+    <div>
       <Head>
         <title>Home</title>
       </Head>
 
+      <Header />
       <Title>Original.io Store</Title>
+
       {products.map((product) => (
         <div key={product.id}>
           <h1>{product.name}</h1>
@@ -49,7 +53,7 @@ const HomePage: React.FC<Props> = ({ products }) => {
           <Link href={"/" + product.id}>Visit Page</Link>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

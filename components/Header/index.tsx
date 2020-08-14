@@ -34,6 +34,14 @@ const Wrapper = styled.div`
       img {
         position: absolute;
       }
+      .search {
+        padding-left: 30px;
+        width: 10rem;
+      }
+
+      .buy {
+        position: relative;
+      }
     }
   }
 `;
@@ -41,7 +49,7 @@ const Wrapper = styled.div`
 const Header = () => (
   <HeaderContainer>
     <Container>
-      <img class="logo" src="../../static/assets/logo.jpg" />
+      <img className="logo" src="../../static/assets/logo.jpg" />
       <hr />
       <Wrapper>
         <div>
@@ -59,12 +67,13 @@ const Header = () => (
               src="../../static/assets/icons/header/Union.svg"
               alt="Search"
             />
-            <input type="text" placeholder="Busca" />
+            <input type="text" placeholder="Busca" className="search" />
           </span>
           <span>
             <img
-              src="../../static/assets/icons/header/Union.svg"
-              alt="Search"
+              src="../../static/assets/icons/header/Vector-2.svg"
+              alt="Buy"
+              className="buy"
             />
             0
           </span>

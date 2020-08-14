@@ -52,4 +52,12 @@ export default createGlobalStyle`
   a:hover {
     text-decoration: none;
   }
+  hr {
+    color: gray;
+    background-color: gray;
+  }
+  input {
+    border: 0;
+    border-bottom: 1px solid gray;
+  }
 `;

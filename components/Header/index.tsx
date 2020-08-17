@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
+import media from "styled-media-query";
 
 import Container from "../Container";
 
@@ -14,6 +15,10 @@ const HeaderContainer = styled.div`
 
   .logo {
     padding: 2rem;
+
+    ${media.lessThan("medium")`
+      display: none;
+    `}
   }
 `;
 
@@ -24,6 +29,9 @@ const Wrapper = styled.div`
   padding: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
+
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 
   div {
     flex-direction: row;
@@ -36,6 +44,7 @@ const Wrapper = styled.div`
       }
       .search {
         padding-left: 30px;
+        padding-bottom: 0.2rem;
         width: 10rem;
       }
 
@@ -44,13 +53,41 @@ const Wrapper = styled.div`
       }
     }
   }
+
+  ${media.lessThan("medium")`
+    display: none;
+  `}
+`;
+
+const WrapperMobile = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+
+  div {
+    img {
+      padding-left: 2rem;
+    }
+  }
+
+  ${media.greaterThan("large")`
+    display: none;
+  `}
 `;
 
 const Header = () => (
   <HeaderContainer>
     <Container>
       <img className="logo" src="../../static/assets/logo.jpg" />
-      <hr />
+      <WrapperMobile>
+        <img src="../../static/assets/icons/header/Vector.svg" alt="Menu" />
+        <img src="../../static/assets/logo.jpg" />
+        <div>
+          <img src="../../static/assets/icons/header/Union.svg" alt="Search" />
+          <img src="../../static/assets/icons/header/Vector-2.svg" alt="Buy" />
+        </div>
+      </WrapperMobile>
       <Wrapper>
         <div>
           <span>Entrar | Cadastrar-se</span>
@@ -79,7 +116,6 @@ const Header = () => (
           </span>
         </div>
       </Wrapper>
-      <hr />
     </Container>
   </HeaderContainer>
 );

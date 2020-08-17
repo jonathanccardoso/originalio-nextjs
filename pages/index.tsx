@@ -5,6 +5,7 @@ import Stripe from "stripe";
 
 import styled from "styled-components";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import stripeConfig from "../config/stripe";
 
@@ -53,6 +54,8 @@ const HomePage: React.FC<Props> = ({ products }) => {
           <Link href={"/" + product.id}>Visit Page</Link>
         </div>
       ))}
+
+      <Footer />
     </div>
   );
 };

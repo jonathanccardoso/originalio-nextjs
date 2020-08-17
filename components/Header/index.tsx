@@ -27,8 +27,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
 
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -45,7 +43,7 @@ const Wrapper = styled.div`
       .search {
         padding-left: 30px;
         padding-bottom: 0.2rem;
-        width: 10rem;
+        width: 6rem;
       }
 
       .buy {

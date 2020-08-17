@@ -26,6 +26,17 @@ const SocialsIcons = styled.div`
   }
 `;
 
+const MenuFooter = styled.div`
+  display: flex;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-right: 4rem;
+  }
+`;
+
 const DescriptionFooter = styled.div`
   display: flex;
   align-items: center;
@@ -35,15 +46,25 @@ const DescriptionFooter = styled.div`
   background-color: #dd9076;
   color: white;
 
+  
   p {
     width: 54rem;
+
+    ${media.lessThan("medium")`
+      width: 0rem;
+    `}
   }
+ 
 
   img {
     width: 20%;
     height: 20%;
     padding-left: 6rem;
     background-size: cover;
+
+    ${media.lessThan("medium")`
+      padding: 0rem;
+    `}
   }
 `;
 
@@ -65,7 +86,18 @@ const Footer = () => (
             alt="Pinterest Icon"
           />
         </SocialsIcons>
-        {/* <div></div> */}
+        <MenuFooter>
+          <div>
+            <img src="#" alt="VTEX" />
+            <img src="#" alt="bit" />
+          </div>
+          <div>
+            <span>Title</span>
+            <a href="#">Item 01</a>
+            <a href="#">Item 02</a>
+            <a href="#">Item 03</a>
+          </div>
+        </MenuFooter>
       </Wrapper>
       <DescriptionFooter>
         <p>

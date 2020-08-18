@@ -61,11 +61,13 @@ const WrapperMobile = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  width: 100%;
+  padding: 1rem;
+  margin-left: 1rem;
 
   div {
-    img {
-      padding-left: 2rem;
+    img:first-child {
+      padding-right: 2rem;
     }
   }
 

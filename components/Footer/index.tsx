@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   padding-top: 1rem;
   padding-left: 6rem;
   padding-right: 6rem;
+  padding-bottom: 2em;
 `;
 
 const SocialsIcons = styled.div`
@@ -28,12 +29,63 @@ const SocialsIcons = styled.div`
 
 const MenuFooter = styled.div`
   display: flex;
+  align-items: center;
+
+  div:first-child {
+    display: flex;
+    flex-direction: row;
+    padding-right: 3rem;
+
+    img {
+      padding-right: 1rem;
+    }
+  }
 
   div {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-right: 6rem;
+    font-size: 0.5em;
+
+    span {
+      color: gray;
+    }
+
+    a {
+      color: black;
+      padding-top: 0.5rem;
+      transition: all 0.7s ease 0s;
+    }
+    a:hover {
+      color: gray;
+    }
+  }
+`;
+
+const CircleFooter = styled.div`
+  position: absolute;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 300px;
+
+    transform: translate(880px, -180px);
+    background-color: white;
+
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin: 50px;
+
+    input,
+    button {
+      margin: 1rem;
+    }
   }
 `;
 
@@ -46,25 +98,16 @@ const DescriptionFooter = styled.div`
   background-color: #dd9076;
   color: white;
 
-  
   p {
     width: 54rem;
-
-    ${media.lessThan("medium")`
-      width: 0rem;
-    `}
+    font-size: 0.4em;
   }
- 
 
   img {
     width: 20%;
     height: 20%;
     padding-left: 6rem;
     background-size: cover;
-
-    ${media.lessThan("medium")`
-      padding: 0rem;
-    `}
   }
 `;
 
@@ -88,16 +131,42 @@ const Footer = () => (
         </SocialsIcons>
         <MenuFooter>
           <div>
-            <img src="#" alt="VTEX" />
-            <img src="#" alt="bit" />
+            <img
+              src="../../static/assets/icons/footer/footer-certifications/vtex-pci-200.svg"
+              alt="bit"
+            />
+            <img
+              src="../../static/assets/icons/footer/footer-certifications/selo-ebit.svg"
+              alt="VTEX"
+            />
           </div>
           <div>
-            <span>Title</span>
-            <a href="#">Item 01</a>
-            <a href="#">Item 02</a>
-            <a href="#">Item 03</a>
+            <span>INSTITUCIONAL</span>
+            <a href="#">A marca</a>
+            <a href="#">Lojas</a>
+            <a href="#">Contato</a>
+          </div>
+          <div>
+            <span>INFORMAÇÕES</span>
+            <a href="#">Formas de Pagamento</a>
+            <a href="#">Trocas e Devoluções</a>
+            <a href="#">Cuidados Com o Produto</a>
+          </div>
+          <div>
+            <span>CONHECER</span>
+            <a href="#">Franquias e Multimarcas</a>
+            <a href="#">Trabalhe com a Gente</a>
+            <a href="#">Procon-RJ</a>
           </div>
         </MenuFooter>
+        <CircleFooter>
+          <form action="#" method="post">
+            <span>ASSINE NOSSA NEWS</span>
+            <input type="text" placeholder="Nome" />
+            <input type="email" placeholder="Email" />
+            <button type="submit">ENVIAR</button>
+          </form>
+        </CircleFooter>
       </Wrapper>
       <DescriptionFooter>
         <p>

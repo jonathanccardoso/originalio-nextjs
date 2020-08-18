@@ -46,7 +46,6 @@ export default createGlobalStyle`
     `}
   }
   a {
-    color: black;
     text-decoration: none;
   }
   a:hover {

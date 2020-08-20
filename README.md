@@ -1,24 +1,26 @@
 <h1 align="center">
-    <img alt="original.io" title="#original.io" src=".github/originalIoLogo.svg" width="200px" />
+    <img alt="original.io" title="original.io" src=".github/originalIoLogo.svg" width="200px" />
 </h1>
 
 <h4 align="center">
-  🚀 Project developed to learn about react, stripe and nextjs
+  Project developed to learn about react, stripe and nextjs!
 </h4>
 
 ## :rocket: Technology
 
 This project was developed with the following technologies:
 
-- [Typescript](#)
-- [Stripe Integration](#)
-- [Styled Components](#)
-- [Styled Media Query](#)
-- [Netlify](#)
+- [Typescript](https://www.typescriptlang.org/)
+- [Stripe Integration](https://stripe.com/br)
+- [Styled Components](https://styled-components.com/)
+- [Styled Media Query](https://github.com/morajabi/styled-media-query)
+- [Netlify](https://www.netlify.com/)
 
 ## 💻 Project
 
 The layout of this project refers to an e-commerce, carried out with the aim of testing knowledge in react js and its attributes.
+
+<img alt="Layout Test Original.io" title="Layout Test Original" src=".github/home.png" width="500px" height="500px" />
 
 [Layout and preferences based on join us of Original](https://github.com/original-io/join-us)
 

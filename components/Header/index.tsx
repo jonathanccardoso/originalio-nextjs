@@ -75,6 +75,28 @@ const WrapperMobile = styled.div`
   `}
 `;
 
+const Breadcrumbs = styled.ul`
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  list-style: none;
+
+  li {
+    display: inline;
+    color: black;
+  }
+
+  li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/";
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Header = () => (
   <HeaderContainer>
     <Container>
@@ -115,6 +137,12 @@ const Header = () => (
           </span>
         </div>
       </Wrapper>
+      <Breadcrumbs>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>Sapatos</li>
+      </Breadcrumbs>
     </Container>
   </HeaderContainer>
 );

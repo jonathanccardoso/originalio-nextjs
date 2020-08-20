@@ -79,6 +79,7 @@ const Breadcrumbs = styled.ul`
   display: flex;
   align-items: center;
   padding: 1rem;
+  margin-left: 1rem;
   list-style: none;
 
   li {
@@ -95,6 +96,10 @@ const Breadcrumbs = styled.ul`
   li a:hover {
     text-decoration: underline;
   }
+
+  ${media.lessThan("medium")`
+    display: none;
+  `}
 `;
 
 const Header = () => (

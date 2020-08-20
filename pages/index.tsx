@@ -3,16 +3,12 @@ import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Stripe from "stripe";
 
-import styled from "styled-components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import GalleryThumbnail from "../components/GalleryThumbnail";
+import PurchaseItems from "../components/PurchaseItems";
 
 import stripeConfig from "../config/stripe";
-
-const Title = styled.h1`
-  color: #069;
-  font-size: 40px;
-`;
 
 interface Props {
   products: Stripe.Product[];
@@ -40,7 +36,9 @@ const HomePage: React.FC<Props> = ({ products }) => {
       </Head>
 
       <Header />
-      <Title>Original.io Store</Title>
+      <GalleryThumbnail />
+
+      <PurchaseItems children="" />
 
       {products.map((product) => (
         <div key={product.id}>

@@ -63,7 +63,6 @@ const WrapperMobile = styled.div`
   align-items: center;
   width: 100%;
   padding: 1rem;
-  margin-left: 1rem;
 
   div {
     img:first-child {

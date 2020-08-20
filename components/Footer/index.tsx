@@ -19,6 +19,12 @@ const Wrapper = styled.div`
   padding-left: 6rem;
   padding-right: 6rem;
   padding-bottom: 2em;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  `}
 `;
 
 const SocialsIcons = styled.div`
@@ -39,13 +45,17 @@ const MenuFooter = styled.div`
     img {
       padding-right: 1rem;
     }
+
+    ${media.lessThan("medium")`
+      padding-right: 0rem;
+    `}
   }
 
   div {
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
-    padding-right: 6rem;
+    padding-right: 4rem;
     font-size: 0.5em;
 
     span {
@@ -61,10 +71,15 @@ const MenuFooter = styled.div`
       color: gray;
     }
   }
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `;
 
 const CircleFooter = styled.div`
   position: absolute;
+  transform: translate(57rem, -8rem);
 
   form {
     display: flex;
@@ -75,23 +90,31 @@ const CircleFooter = styled.div`
     width: 300px;
     height: 300px;
 
-    transform: translate(880px, -180px);
     background-color: white;
 
     border-radius: 50%;
     border: 1px solid gray;
-    margin: 50px;
 
     input,
     button {
       margin: 1rem;
     }
+
+    span {
+      font-weight: bold;
+    }
   }
+
+  ${media.lessThan("medium")`
+    display: none;
+  `}
 `;
 
 const DescriptionFooter = styled.div`
   display: flex;
+  text-align: left;
   align-items: center;
+  justify-content: center;
   padding: 1rem;
   padding-left: 5em;
   padding-right: 5rem;
@@ -99,16 +122,29 @@ const DescriptionFooter = styled.div`
   color: white;
 
   p {
-    width: 54rem;
     font-size: 0.4em;
   }
 
   img {
-    width: 20%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
     padding-left: 6rem;
     background-size: cover;
   }
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    padding: 1rem;
+
+    p {
+      width: 100%;
+    }
+
+    img {
+      width: 50%;
+      padding: 1rem;
+    }
+  `}
 `;
 
 const Footer = () => (

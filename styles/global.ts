@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-import media from "styled-media-query";
-
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
   * {
@@ -39,11 +37,6 @@ export default createGlobalStyle`
   h5 {
     font-weight: 400;
     line-height: 1.1;
-  }
-  p {
-    ${media.lessThan("medium")`
-      margin-top: 4.5rem !important;
-    `}
   }
   a {
     text-decoration: none;

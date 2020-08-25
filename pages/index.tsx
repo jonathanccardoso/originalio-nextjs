@@ -4,7 +4,7 @@ import Stripe from "stripe";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import GalleryThumbnail from "../components/GalleryThumbnail";
+import Item from "../components/Item";
 import PurchaseItems from "../components/PurchaseItems";
 
 import stripeConfig from "../config/stripe";
@@ -33,12 +33,11 @@ const HomePage: React.FC<Props> = ({ products }) => {
       <Head>
         <title>Home</title>
       </Head>
-
       <Header />
-      <GalleryThumbnail />
+
+      <Item product={products[0]} />
 
       <PurchaseItems context={products} />
-
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 
 import Container from "../Container";
+import GalleryThumbnail from "../GalleryThumbnail";
 
 import styled from "styled-components";
 import media from "styled-media-query";
@@ -10,11 +11,6 @@ const ItemsContainer = styled.div`
   text-align: center;
   width: 100%;
   padding-bottom: 4rem;
-`;
-
-const Title = styled.h3`
-  font-size: 1.5em;
-  color: #dd9076;
 `;
 
 const Wrapper = styled.div`
@@ -37,31 +33,25 @@ const Wrapper = styled.div`
       float: right;
     }
   }
-
-  /* ${media.lessThan("medium")`
-    flex-direction: column;
-  `} */
 `;
 
-const PurchaseItems = ({ context }) => (
+const Item = ({ product }) => (
   <ItemsContainer>
     <Container>
-      <Title>QUEM VIU, VIU TAMBÉM</Title>
       <Wrapper>
-        {context.map((product) => (
-          <div key={product.id}>
-            {product.images && <img src={`${product.images}`} />}
-            <h2>R$ 20,00</h2>
-            <span>0 0 0 0 0</span>
-          </div>
-        ))}
+        <GalleryThumbnail />
+
+        <div key={product.id}>
+          {product.images && <img src={`${product.images}`} />}
+        </div>
+
+        <div>
+          <h3>RASTEIRA TIRA DEDO</h3>
+          <span>| R$ 55,20</span>
+        </div>
       </Wrapper>
-      <span>
-        <button>#</button>1 de {context.length}
-        <button>#</button>{" "}
-      </span>
     </Container>
   </ItemsContainer>
 );
 
-export default PurchaseItems;
+export default Item;

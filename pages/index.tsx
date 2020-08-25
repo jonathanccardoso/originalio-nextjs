@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Stripe from "stripe";
 
@@ -38,20 +37,7 @@ const HomePage: React.FC<Props> = ({ products }) => {
       <Header />
       <GalleryThumbnail />
 
-      <PurchaseItems children="" />
-
-      {products.map((product) => (
-        <div key={product.id}>
-          <h1>{product.name}</h1>
-          <p>{product.description}</p>
-          {product.images && (
-            <img src={`${product.images}`} style={{ width: "300px" }} />
-          )}
-          <h2>R$ 20,00</h2>
-
-          <Link href={"/" + product.id}>Visit Page</Link>
-        </div>
-      ))}
+      <PurchaseItems context={products} />
 
       <Footer />
     </div>

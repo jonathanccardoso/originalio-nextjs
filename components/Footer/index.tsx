@@ -92,12 +92,28 @@ const CircleFooter = styled.div`
 
     background-color: white;
 
+    padding-top: 2rem;
     border-radius: 50%;
     border: 1px solid gray;
 
     input,
     button {
       margin: 1rem;
+    }
+
+    button {
+      padding: 1rem;
+      color: white;
+      background-color: #dd9076;
+      border: none;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease-in-out 0s;
+    }
+
+    button:hover {
+      background-color: white;
+      color: #dd9076;
+      border: 1px #dd9076 solid;
     }
 
     span {

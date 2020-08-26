@@ -25,6 +25,7 @@ const Wrapper = styled.div`
 
   div {
     margin-left: 1rem;
+    width: 20%;
 
     img {
       width: 100%;
@@ -57,7 +58,7 @@ const PurchaseItems = ({ context }) => (
         ))}
       </Wrapper>
       <span>
-        <button>#</button>1 de {context.length}
+        <button>#</button>{context.length > 3 ? "1 de 3" : "1 de 1" }
         <button>#</button>{" "}
       </span>
     </Container>

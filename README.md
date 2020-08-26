@@ -18,6 +18,8 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34092a3f-b2b6-4b9e-9a64-dd1746716ae5/deploy-status)](https://app.netlify.com/sites/originalio-nextjs/deploys)
+
 The layout of this project refers to an e-commerce, carried out with the aim of testing knowledge in react js and its attributes.
 
 <img alt="Layout Test Original.io" title="Layout Test Original" src=".github/home.png" width="500px" height="500px" />

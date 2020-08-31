@@ -157,7 +157,6 @@ const DescriptionFooter = styled.div`
     }
 
     img {
-      width: 50%;
       padding: 1rem;
     }
   `}
@@ -214,8 +213,8 @@ const Footer = () => (
         <CircleFooter>
           <form action="#" method="post">
             <span>ASSINE NOSSA NEWS</span>
-            <input type="text" placeholder="Nome" />
-            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Nome" required />
+            <input type="email" placeholder="Email" required />
             <button type="submit">ENVIAR</button>
           </form>
         </CircleFooter>

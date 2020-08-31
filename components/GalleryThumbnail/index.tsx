@@ -4,17 +4,39 @@ import styled from "styled-components";
 import media from "styled-media-query";
 
 const GalleryContainer = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
   top: 0;
   z-index: 3;
   color: gray;
   text-align: center;
+
+  span {
+    color: #dd9076;
+  }
+
+  img:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  &:after {
+    content: url("../../static/assets/icons/icon-down.png");
+  }
+  &:before {
+    content: url("../../static/assets/icons/icon-up.png");
+  }
 `;
 
-const GalleryThumbnail = () => (
+const GalleryThumbnail = ({ context }) => (
   <GalleryContainer>
-    {/* <img src={`${product.images}`} alt="ThumbnailOne" /> */}
-    <img src="#" alt="ThumbnailOne" />
+    <span>Vídeo</span>
+    {/* {context.images && <img src={`${context.images}`} alt="ThumbnailOne" />} */}
+    <img src="../../static/assets/thumbnail-image.png" alt="ThumbnailOne" />
+    <img src="../../static/assets/thumbnail-image.png" alt="ThumbnailOne" />
+    <img src="../../static/assets/thumbnail-image.png" alt="ThumbnailOne" />
+    <img src="../../static/assets/thumbnail-image.png" alt="ThumbnailOne" />
+    <img src="../../static/assets/thumbnail-image.png" alt="ThumbnailOne" />
   </GalleryContainer>
 );
 

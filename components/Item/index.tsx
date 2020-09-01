@@ -7,8 +7,6 @@ import styled from "styled-components";
 import media from "styled-media-query";
 
 const ItemsContainer = styled.div`
-  position: relative;
-  text-align: center;
   width: 100%;
   padding-bottom: 4rem;
 `;
@@ -16,7 +14,6 @@ const ItemsContainer = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 1rem;
 
   div {
@@ -39,17 +36,32 @@ const ItemContent = styled.div`
   text-align: left;
   padding: 1rem;
   border: 1px gray solid;
+  width: 42%;
+  height: 5%;
 
   div {
     display: flex;
     flex-direction: column;
+    padding-bottom: 1rem;
 
     h3 {
       font-weight: bold;
       float: left;
     }
-    span {
-      float: right;
+
+    button {
+      padding: 1rem;
+      color: white;
+      background-color: #dd9076;
+      border: none;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease-in-out 0s;
+    }
+
+    button:hover {
+      background-color: white;
+      color: #dd9076;
+      border: 0.5px #dd9076 solid;
     }
   }
 `;
@@ -77,11 +89,13 @@ const Item = ({ product }) => {
               <span>R$ 69,00| R$ 55,20</span>
               <span>Ou 6x de R$ 9,20</span>
             </div>
-            {/* <div>
-              <p>
-                <span>(Fucsia)</span>
-                <span>0 0 0 0 0 0</span>
-              </p>
+            <div>
+              <span>(Fucsia)</span>
+              <span>0 0 0 0 0 0</span>
+            </div>
+            <div>
+              <span>Tamanho: (37)</span>
+              <span>0 0 0 0 0 0</span>
             </div>
             <div>
               <button>ADICIONAR À SACOLA</button>
@@ -89,7 +103,7 @@ const Item = ({ product }) => {
                 Rasteira em atanado soft com tira no dedo e fechamento de
                 fivela. Possui sola sempre na cor do cabedal.
               </p>
-            </div> */}
+            </div>
           </ItemContent>
         </Wrapper>
       </Container>

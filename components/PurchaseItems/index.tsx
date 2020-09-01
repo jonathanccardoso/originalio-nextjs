@@ -10,6 +10,13 @@ const ItemsContainer = styled.div`
   text-align: center;
   width: 100%;
   padding-bottom: 4rem;
+
+  .align-pagination {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 `;
 
 const Title = styled.h3`
@@ -57,9 +64,20 @@ const PurchaseItems = ({ context }) => (
           </div>
         ))}
       </Wrapper>
-      <span>
-        <button>#</button>{context.length > 3 ? "1 de 3" : "1 de 1" }
-        <button>#</button>{" "}
+      <span className="align-pagination">
+        <a href="#">
+          <img
+            src="../../static/assets/icons/pagination/left-arrow.png"
+            alt="left-arrow"
+          />
+        </a>
+        {context.length > 3 ? <span>1 de 3</span> : <span>1 de 1</span>}
+        <a href="#">
+          <img
+            src="../../static/assets/icons/pagination/right-arrow.png"
+            alt="right-arrow"
+          />
+        </a>{" "}
       </span>
     </Container>
   </ItemsContainer>

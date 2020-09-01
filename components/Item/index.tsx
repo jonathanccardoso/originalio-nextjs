@@ -50,6 +50,10 @@ const ItemContent = styled.div`
       text-decoration: underline;
     }
 
+    img {
+      width: 30%;
+    }
+
     h3 {
       font-weight: bold;
       font-size: 1.5em;
@@ -109,7 +113,10 @@ const Item = ({ product }) => {
               <span>
                 Cor: <span className="color-gray">(Fucsia)</span>{" "}
               </span>
-              <span>0 0 0 0 0 0</span>
+              <img
+                src="../../static/assets/icons/colors-item.png"
+                alt="colors"
+              />
             </div>
             <div>
               <span>

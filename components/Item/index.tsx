@@ -36,7 +36,7 @@ const ItemContent = styled.div`
   text-align: left;
   padding: 1rem;
   border: 1px gray solid;
-  width: 42%;
+  width: 38%;
   height: 5%;
 
   div {
@@ -44,12 +44,25 @@ const ItemContent = styled.div`
     flex-direction: column;
     padding-bottom: 1rem;
 
+    a {
+      color: #dd9076;
+      float: right;
+      text-decoration: underline;
+    }
+
     h3 {
       font-weight: bold;
+      font-size: 1.5em;
       float: left;
     }
 
+    span.color-gray {
+      color: gray;
+      font-size: 0.8em;
+    }
+
     button {
+      font-size: 1.2em;
       padding: 1rem;
       color: white;
       background-color: #dd9076;
@@ -62,6 +75,7 @@ const ItemContent = styled.div`
       background-color: white;
       color: #dd9076;
       border: 0.5px #dd9076 solid;
+      cursor: pointer;
     }
   }
 `;
@@ -86,19 +100,27 @@ const Item = ({ product }) => {
             <div>
               <h3>RASTEIRA TIRA DEDO</h3>
               <span>RT 0568 | 03.07.0653</span>
+            </div>
+            <div>
               <span>R$ 69,00| R$ 55,20</span>
-              <span>Ou 6x de R$ 9,20</span>
+              <span className="color-gray">Ou 6x de R$ 9,20</span>
             </div>
             <div>
-              <span>(Fucsia)</span>
+              <span>
+                Cor: <span className="color-gray">(Fucsia)</span>{" "}
+              </span>
               <span>0 0 0 0 0 0</span>
             </div>
             <div>
-              <span>Tamanho: (37)</span>
-              <span>0 0 0 0 0 0</span>
+              <span>
+                Tamanho: <span className="color-gray"> (37) </span>
+                <a href="#">Guia de medidas</a>
+              </span>
             </div>
             <div>
               <button>ADICIONAR À SACOLA</button>
+            </div>
+            <div>
               <p>
                 Rasteira em atanado soft com tira no dedo e fechamento de
                 fivela. Possui sola sempre na cor do cabedal.
